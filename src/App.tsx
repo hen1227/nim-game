@@ -6,6 +6,7 @@ import LocalPage from "./pages/LocalPage.tsx";
 import OnlinePage from "./pages/OnlinePage.tsx";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import ComingSoonPage from "./pages/ComingSoonPage.tsx";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                     <Route path="/" element={<HomePage/>}/>
                     <Route path="/play-local" element={<LocalPage/>}/>
                     <Route path="/play-online" element={<OnlinePage/>}/>
+                    <Route path="/play-computer" element={<ComingSoonPage/>}/>
 
                 </Routes>
                 <ToastContainer

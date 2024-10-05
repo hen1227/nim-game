@@ -43,7 +43,8 @@ const LocalPage: React.FC = () => {
             {winner ? (
                 <h2>Player {winner} wins!</h2>
             ) : (
-                <h2>Player {board.playerTurn}'s turn</h2>
+                <h2 className={`${board.playerTurn === 1 ? 'player-one' : 'player-two'}-container`}>
+                    Player {board.playerTurn}'s turn</h2>
             )}
             <div className={`player-background player-${board.playerTurn === 1 ? 'one' : 'two'}${winner ? '-wins' : ''}`}></div>
             <GameBoard board={board} onMove={handleMove}/>

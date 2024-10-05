@@ -5,26 +5,33 @@
     align-items: flex-start;
     width: 100%;
     max-width: 400px;
+    margin: 10px auto 0;
 }
 
 .row {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    flex-wrap: nowrap;
 }
+
 .row-details {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 20px;
-    width: 50px;
+    width: 65px;
+    /*gap: 2px;*/
+}
+.row-details p {
+    margin: 0;
+    font-size: 0.9em;
 }
 
 .chocolates {
     display: flex;
     flex-direction: row-reverse;
-    flex-wrap: wrap;
-    margin-right: 20px;
+    flex-wrap: nowrap;
+    /*margin-right: 10px;*/
     width: 100%;
 }
 
@@ -69,6 +76,22 @@
 .player-background.player-two-wins {
     background-color: #225;
 }
+.player-one-container {
+    display: flex;
+    background: #311;
+    outline: 2px solid #933;
+    padding: 4px 7px;
+    border-radius: 5px;
+    color: #caa;
+}
+.player-two-container {
+    display: flex;
+    background: #113;
+    outline: 2px solid #339;
+    padding: 4px 7px;
+    border-radius: 5px;
+    color: #9cc;
+}
 
 .row-info {
     text-align: left;
@@ -103,4 +126,38 @@ h1 {
 
 h2 {
     margin-bottom: 20px;
+}
+
+.spectator-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    font-weight: bolder;
+}
+
+.available-online-games-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 750px;
+}
+
+.available-online-game {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 15px;
+    width: 100%;
+    max-width: 250px;
+    background-color: #1a1a1acc;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.available-online-game button {
+    border: 1px #fff solid;
 }
