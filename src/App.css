@@ -1,0 +1,82 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  /*height: 100svh;*/
+  /*flex: 1;*/
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90svh;
+  width: 100%;
+  max-width: 750px;
+  /*padding: 5svh 0;*/
+  margin: 0 auto;
+}
+
+.page h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.page p {
+  font-size: 1.2rem;
+  margin: 2px 0;
+  font-weight: 300;
+  color: #eee;
+}
+
+
+
+.navbar {
+  position: relative;
+  /*width: 100%;*/
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 2rem;
+  background-color: #333f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin-right: 1rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.spacer {
+  flex: 1;
+}
+
+p.disclaimer {
+  font-size: 0.6em;
+  color: rgba(127, 127, 127, 0.5);
+  margin-top: 1em;
+}

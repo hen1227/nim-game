@@ -1,0 +1,35 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0000;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+    outline: none;
+}
+
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active {
+    background-color: #555;
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
+
+.navbar a:visited {
+    color: #fff;
+}
+
+.navbar a:focus {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
