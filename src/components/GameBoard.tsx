@@ -5,7 +5,7 @@ import { BoardState, Move } from '../types/game';
 
 interface GameBoardProps {
     board: BoardState;
-    onMove: (move: Move) => void;
+    onMove: (move: Move, byComputer?: boolean) => void;
 }
 
 const GameBoard: React.FC<GameBoardProps> = ({ board, onMove }) => {

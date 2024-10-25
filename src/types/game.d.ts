@@ -3,6 +3,13 @@ export interface BoardState {
     playerTurn: number;
 }
 
+export interface BoardHistoryState {
+    board: BoardState;
+    move: Move;
+    wasComputerMoved: boolean;
+    wasOptimalMove: boolean;
+}
+
 export type GameRow = number[];
 
 export interface Move {

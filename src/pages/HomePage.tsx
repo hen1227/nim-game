@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const HomePage = () => {
     return (
-        <div className={'page'}>
+        <div className={'vertical-page'}>
             {/*<span className={'spacer'}></span>*/}
             <span className={'spacer'}></span>
             <h1>Chocolate Game 🍫</h1>

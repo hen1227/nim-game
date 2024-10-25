@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import { io, Socket } from 'socket.io-client';
 import GameBoard from '../components/GameBoard';
 import { AvailableGame, BoardState, Move } from '../types/game';
@@ -69,7 +69,7 @@ const OnlinePage: React.FC = () => {
         socket.emit('playAgain', gameId);
     };
 
-    const resetGame = () => {
+    const resetGame = useCallback(() => {
         setBoard(null);
         setWinner(null);
         setGameId(null);
@@ -77,7 +77,7 @@ const OnlinePage: React.FC = () => {
         setOpponentJoined(false);
         setSpectatorCount(0);
         void fetchAvailableGames();
-    };
+    }, []);
 
     useEffect(() => {
         socket.connect();
@@ -178,10 +178,10 @@ const OnlinePage: React.FC = () => {
             socket.off('opponentLeft');
             socket.off('gameRestarted');
         };
-    }, []);
+    }, [resetGame]);
 
     return (
-        <div className="page">
+        <div className="vertical-page">
             <span className="spacer"></span>
             <span className="spacer"></span>
             <h2>🍫 Chocolate Game Online! 🛜</h2>
