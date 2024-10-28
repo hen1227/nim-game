@@ -1,7 +1,7 @@
 {
   "name": "nim-game",
   "private": false,
-  "version": "0.2.0",
+  "version": "0.3.1",
   "author": "Henry Abrahamsen",
   "type": "module",
   "scripts": {
