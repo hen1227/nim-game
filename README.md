@@ -28,6 +28,7 @@ Consider the following example:
 Row1: 1 -> 0 0 0 1
 Row2: 5 -> 0 1 0 1
 Row3: 3 -> 0 0 1 1
+------------------
 XOR:       0 1 1 1
 ```
 You can only ever remove chocolate, not add.
@@ -39,6 +40,7 @@ Now, let's take the XOR of the rows without `Row2`:
 Row1: 1 -> 0 0 0 1
 Row2: skipping
 Row3: 3 -> 0 0 1 1
+------------------
 New XOR:   0 0 1 0
 ```
 To make the total `XOR` value zero, we now know that we need `Row2` to be `0 0 1 0`.
@@ -48,3 +50,15 @@ Since we will only ever be eating from a row with the largest bit in the `XOR` v
 largest bit will be zero, and therefore the `New XOR` will always be smaller than the original `XOR`. 
 Thus, we can always make the `XOR` value zero after the move.
 
+## Game Structure
+
+The state of the game is stored with the following states:
+``` typescript
+type GameRows = number[];
+
+interface BoardState {
+    rows: GameRows;
+    playerTurn: number;
+}
+```
+When a player moves, I subtract the corresponding row by that number and switch the player turn.

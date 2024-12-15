@@ -24,13 +24,7 @@ export const findNextBestMove = (rows: number[]): {
     // Move on the row with a 1 bit at left most xor bit 1
     // Once we have the row, we just remove the required number of chocolates to make the xor 0000
 
-    console.log(rows);
-    console.log(binaryXOR.toString(2).padStart(4, '0'));
-
     if (binaryXOR === 0) {
-        console.log('No best move found');
-        console.log('Moving randomly');
-
         const rowsWithNonZeroChocolates = rows.map((_row, idx) => idx).filter(idx => rows[idx] > 0);
 
         const randomRowIndex = rowsWithNonZeroChocolates[Math.floor(Math.random() * rowsWithNonZeroChocolates.length)];

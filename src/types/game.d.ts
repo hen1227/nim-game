@@ -1,5 +1,5 @@
 export interface BoardState {
-    rows: GameRow;
+    rows: GameRows;
     playerTurn: number;
 }
 
@@ -10,7 +10,7 @@ export interface BoardHistoryState {
     wasOptimalMove: boolean;
 }
 
-export type GameRow = number[];
+export type GameRows = number[];
 
 export interface Move {
     rowIndex: number;
